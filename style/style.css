@@ -263,7 +263,8 @@ td{
     height: 50px;
 }
 
-.telefoon_nummer {
+.telefoon_nummer-header {
+    
     text-decoration: none;
     width: 200px;
     text-align: center;
@@ -271,7 +272,16 @@ td{
     transition: 0.7s;
 }
 
-.telefoon_nummer:hover {
+.telefoon_nummer {
+    display: flex;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    color: black;
+    transition: 0.7s;
+}
+
+.telefoon_nummer-header:hover {
     color: #592D14;
 }
 
