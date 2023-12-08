@@ -20,6 +20,11 @@ body {
     height: 650px;
 }
 
+.display_flex {
+    display: flex;
+    justify-content: center;
+}
+
 .container_header-contact {
     display: flex;
     align-items: center;
@@ -69,7 +74,7 @@ body {
     color: #592D14;
 }
 
-.container {
+.container_header {
     width: 1200px;
     display: flex;
     justify-content: center;
@@ -116,6 +121,12 @@ nav ul li {
     margin: 20px;
 }
 
+.container_sfeerbeeld {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
 .sfeerbeelden_img {
     height: 250px;
     margin-top: 30px;
@@ -129,6 +140,12 @@ nav ul li {
 
 .home_content-infohotel {
     background-color: #BF895A;
+    display: flex;
+    justify-content: center;
+}
+
+.container_info {
+    width: 1200px;
     display: flex;
     justify-content: center;
 }
