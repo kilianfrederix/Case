@@ -212,11 +212,11 @@ td{
 .kamers{
 	width: 70%;
     height: 400px;
-	margin: 2em;
+	margin: auto;
 	display: flex;
-    margin-left: 20em;
+    
 	gap: 20px;
-	padding: 20px 0;
+	padding: 0px 0;
 	border: 5px solid #8c6d51;
 	padding-bottom: 2em;
     padding-top: 2em;
