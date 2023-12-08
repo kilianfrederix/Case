@@ -214,6 +214,35 @@ td{
     background: #bf895a;
 }
 
+.kamers{
+	width: 70%;
+    height: 400px;
+	margin: 2em;
+	display: flex;
+    margin-left: 20em;
+	gap: 20px;
+	padding: 20px 0;
+	border: 5px solid #8c6d51;
+	padding-bottom: 2em;
+    padding-top: 2em;
+    background: #bf895a;
+}
+
+.beschrijving{
+	margin-left: 2em;
+	width: 35%;
+    background: #d9bca3;
+}
+
+.kamerfoto{
+    
+	width: 100%;
+    background: #d9bca3;
+    margin-right: 2em;
+   
+}
+
+
 .main{
 	width: 100%;
 	
@@ -378,7 +407,7 @@ nav ul li {
     width: 25%;
     
     margin-top:30px;
-    text-align: center;
+    
 }
 
 .home_content-infohotel {
