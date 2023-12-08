@@ -358,23 +358,26 @@ nav ul li {
 .home_content-sfeerbeelden {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 50px;
+   
 }
 
 .container_sfeerbeeld {
-    width: 1200px;
+    width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .sfeerbeelden_img {
-    height: 250px;
+    width: 25%;
     margin-top: 30px;
+    
 }
 
 .sfeerbeelden_text {
-    width: 600px;
-    margin:30px;
+    width: 25%;
+    
+    margin-top:30px;
     text-align: center;
 }
 
