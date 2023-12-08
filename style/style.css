@@ -242,7 +242,7 @@ td{
 .background_photo {
     display: flex;
     justify-content: center;
-    background-image: url(/img/header_background.jpg);
+    background-image: url(../img/header_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
