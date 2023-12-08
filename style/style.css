@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+}
+
+.main_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #BF895A;
+}
+
+.background_photo {
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/header_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+
+.container_header-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: 50px;
+}
+
+.telefoon_nummer {
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    color: white;
+    transition: 0.7s;
+}
+
+.telefoon_nummer:hover {
+    color: #592D14;
+}
+
+.address {
+    text-decoration: none;
+    width: 400px;
+    text-align: center;
+    color: white;
+    transition: 0.7s;
+}
+
+.address:hover {
+    color: #592D14;
+}
+
+.social-media_icons {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: 0.7s;
+}
+
+.icon:hover {
+    color: #592D14;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav {
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: right;
+    color: white;
+    transition: 0.7s;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px
+}
+
+.reserveerlink {
+    border: 1px solid;
+    border-radius: 20px;
+    margin-left: 15px;
+    transition: 0.7s;
+}
+
+.reserveerlink:hover {
+    border: #BF895A;
+    color: #592D14;
+    background-color: #BF895A;
+}
+
+.home_content-sfeerbeelden {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.sfeerbeelden_img {
+    height: 250px;
+    margin-top: 30px;
+}
+
+.sfeerbeelden_text {
+    width: 600px;
+    margin:30px;
+    text-align: center;
+}
+
+.home_content-infohotel {
+    background-color: #BF895A;
+    display: flex;
+    justify-content: center;
+}
+
+.info_hotel {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.home_info-hotel {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container_infohotel-restaurant {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_hotel {
+    width: 50%;
+}
+
+.text_hotel {
+    width: 50%;
+    text-align: center;
+}
+
+.img_restaurant {
+    width: 50%;
+}
+
+.text_restaurant {
+    width: 50%;
+}
+
+.sightseeing {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sightseeing_info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container_sightseeing {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sfeerbeelden_box {
+    width: 300px;
+}
+
+
+.text_sightseeing {
+    width: 300px;
+}
+
+.img_sightseeing {
+    height: 200px;
+
+}
