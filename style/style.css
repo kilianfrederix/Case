@@ -1,10 +1,5 @@
-body {
-    margin: 0;
-}
-
 body{
 	margin: 0;
-	
 	width: auto;
 	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
@@ -16,7 +11,9 @@ body{
     justify-content: center;
 }
 
-
+strong {
+    color: #592D14;
+}
 
 .display_flex {
     display: flex;
@@ -81,6 +78,7 @@ body{
 
 .logo {
     width: 200px;
+    color: white;
 }
 
 nav {
@@ -119,7 +117,9 @@ form{
 	margin-top: 12em;
 }
 
-
+img {
+    border-radius: 20px;
+}
 
 i{
     padding: 1em;
@@ -134,7 +134,7 @@ i{
 	border: 5px solid #8c6d51;
 	padding-bottom: 2em;
     padding-top: 2em;
-    background: #bf702a;
+    background: #BF895A;
 }
 
 .left3{
@@ -157,7 +157,7 @@ i{
 }
 
 iframe{
-   
+    border-radius: 20px;
     width: 75%;
 }
 
@@ -190,9 +190,21 @@ td{
 
 
 .container1{
-	
 	width: 1200px;
 	margin: auto;
+	display: flex;
+	gap: 20px;
+	padding: 20px 0;
+	border: 5px solid #8c6d51;
+	padding-bottom: 2em;
+    padding-top: 2em;
+    background: #bf895a;
+}
+
+.container_openingsuren {
+    width: 1200px;
+    margin: auto;
+	margin-bottom: 75px;
 	display: flex;
 	gap: 20px;
 	padding: 20px 0;
@@ -220,8 +232,6 @@ td{
     margin-left: 2em;
 }
 
-
-
 .main_header {
     display: flex;
     flex-wrap: wrap;
@@ -232,7 +242,7 @@ td{
 .background_photo {
     display: flex;
     justify-content: center;
-    background-image: url(img/header_background1.jpg);
+    background-image: url(/img/header_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -410,7 +420,18 @@ nav ul li {
 .sightseeing {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 20px;
+}
+
+.sightseeing_box {
+    margin: 0 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #BF895A;
+    border-radius: 20px;
+    padding-top: 10px;
 }
 
 .sightseeing_info {
@@ -437,6 +458,6 @@ nav ul li {
 }
 
 .img_sightseeing {
-    height: 200px;
-
+    height: 180px;
+    border-radius: 20px;
 }
