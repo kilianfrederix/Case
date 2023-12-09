@@ -589,7 +589,7 @@ nav ul li {
 }
 
 .background_hotel-reservatie {
-    background-image: url(../img/welkomsnuffel.jpg);
+    background-image: url(../img/achtergrond_form_hotel.jpg);
     background-position: center;
     background-size: 100% 100%;
     width: 100%;
@@ -724,7 +724,7 @@ nav ul li {
 }
 
 .aantal_input-kinderen {
-    width: 100%;
+    width: 95%;
     padding: 5px;
     margin-top: 5px;
     border: 1px solid;
