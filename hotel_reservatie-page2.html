@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hotel reservatie</title>
 </head>
 <body class="background_hotel-reservatie">
@@ -44,14 +47,69 @@
             </div>
         </div>
     </header>
-    <h1>Snuffel hotel</h1>
     <div class="form_hotel-reservatie">
-        <div class="container_form-hotel-reservatie">
+        <div class="container_form-hotel-reservatie-page2">
+            <form class="hotel_form-page2" action="">
+                <h1>Reservatie</h1>
+                <div class="gegevens_box">
+                    <label class="naam_label" for="voornaam">Voornaam:</label>
+                    <input class="naam_input" type="text" id="voornaam" name="voornaam">
+                </div>
+                <div class="gegevens_box">
+                    <label class="naam_label" for="achternaam">Achternaam:</label>
+                    <input class="naam_input" type="text" id="achternaam" name="achternaam">
+                </div>
+                <div class="gegevens_box">
+                    <label class="nummer_label" for="nummer">Telefoon Nummer:</label>
+                    <input class="nummer_input" type="number" name="nummer" id="nummer" placeholder="0000-00-00-00">
+                </div>
+                <div class="gegevens_box">
+                    <label class="email_label" for="email">E-mail Address:</label>
+                    <input class="email_input" type="email" name="email" id="email">
+                </div>
+                <h1>Uw Address</h1>
+                <div class="adress_gegevens_3wide">
+                    <div class="straatnaam_box">
+                        <label class="straatnaam_label" for="straatnaam">Straatnaam:</label>
+                        <input class="straatnaam_input" type="text" id="straatnaam" name="straatnaam">
+                    </div>
+                    <div class="straatnummer_box">
+                        <label class="straatnummer_label" for="straatnummer">Nummer:</label>
+                        <input class="straatnummer_input" type="number" name="straatnummer" id="straatnummer">
+                    </div>
+                    <div class="bus_box">
+                        <label class="bus_label" for="bus">Bus:</label>
+                        <input class="bus_input" type="number" name="bus" id="bus">
+                    </div>
+                </div>
+                <div class="postcode-gemeente_box">
+                    <div class="postcode_box">
+                        <label class="postcode_label" for="postcode">Postcode</label>
+                        <input class="postcode_input" type="number" name="postcode" id="postcode">
+                    </div>
+                    <div class="gemeente_box">
+                        <label class="gemeente_label" for="gemeente">Gemeente</label>
+                        <input class="gemeente_input" type="text" id="gemeente" name="gemeente">
+                    </div>
+                    <div class="gegevens_box">
+                        <label class="naam_label" for="voornaam">Voornaam:</label>
+                        <input class="naam_input" type="text" id="voornaam" name="voornaam">
+                    </div>
+                    <div class="gegevens_box">
+                        <label class="naam_label" for="achternaam">Achternaam:</label>
+                        <input class="naam_input" type="text" id="achternaam" name="achternaam">
+                    </div>
+                </div>
+                <div class="volgende_pagina">
+                    <button class="hotel_reservatie-btn" type="submit">Submit</button>
+                </div>
 
+
+
+
+            </form>
         </div>
     </div>
-
-
     <div class="footer">
         <div class="left3">
             <h3>Adres</h3>
