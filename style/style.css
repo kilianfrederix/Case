@@ -230,11 +230,9 @@ td{
 }
 
 .kamerfoto{
-    
 	width: 100%;
     background: #d9bca3;
     margin-right: 2em;
-   
 }
 
 
@@ -265,6 +263,26 @@ td{
     background-size: 100% 100%;
     width: 100%;
     height: 88vh;
+}
+
+.background_photo-restaurant {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/welkomsnuffel.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh
+}
+
+.background_photo-hotel{
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/welkomsnuffel.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh
 }
 
 .arrow_button {
@@ -568,4 +586,176 @@ nav ul li {
 .img_sightseeing {
     height: 180px;
     border-radius: 20px;
+}
+
+.background_hotel-reservatie {
+    background-image: url(../img/welkomsnuffel.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 70vh
+}
+
+.form_title {
+    color: white;
+}
+
+.form_hotel-reservatie {
+    display: flex;
+    justify-content: center;
+}
+
+.container_form-hotel-reservatie {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.hotel_form {
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+.aankomst_vertrek {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.aankomst {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.aankomst_label {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 1rem;
+    
+}
+
+.aankomst_input {
+    width: 90%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid ;
+    border-radius: 10px;
+}
+
+.vertrek {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.vertrek_label {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.vertrek_input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid ;
+    border-radius: 10px;
+}
+
+.kamers_reservatie {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+}
+
+.kamers_label {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.kamers_select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid ;
+    border-radius: 10px;
+}
+
+.aantal_personen {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.volwassenen {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.kinderen {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.aantal_label {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.aantal_input {
+    width: 90%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.aantal_input-kinderen {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.eten_reservatie {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.eettijden {
+    width: 100%;
+}
+
+.eten_input {
+    width: 15px;
+    height: 15px;
+}
+
+.eten_label {
+    font-size: 1.2rem;
+}
+
+.volgende_pagina {
+    width: 100%;
+}
+
+.hotel_reservatie-btn {
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
 }

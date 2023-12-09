@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Hotel reservatie</title>
+</head>
+<body class="background_hotel-reservatie">
+    <header class="main_header">
+        <div class="container_header-contact">
+            <a class="telefoon_nummer-header" href="tel:+3250333133">+32 50 33 31 33 </a>
+            <a class="address" href="https://maps.app.goo.gl/y6HDtCFecsVtr8xt6">Ezelstraat 42, 8000 Brugge</a>
+            <div class="social-media_icons">
+                <a href="https://www.facebook.com/Snuffelbackpackerhostel/"><i
+                        class="fa-brands fa-facebook icon"></i></a>
+                <a href="https://www.instagram.com/snuffelhostel/"><i class="fa-brands fa-instagram icon"></i></a>
+            </div>
+        </div>
+        <div class="display_flex">
+            <div class="container">
+                <div class="logo">
+                    <h1>DE SNUFFEL</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="hotelkamers.html">
+                            <li>kamers</li>
+                        </a>
+                        <a href="restaurant.html">
+                            <li>Restaurant</li>
+                        </a>
+                        <a href="restaurant_reservatie.html">
+                            <li class="reserveerlink">Reserveer een tafel</li>
+                        </a>
+                        <a href="hotel_reservatie.html">
+                            <li class="reserveerlink">Reserveer een kamer</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <h1 class="form_title">Snuffel hotel</h1>
+    <div class="form_hotel-reservatie">
+        <div class="container_form-hotel-reservatie">
+            <form class="hotel_form" action="hotel_reservatie-page2.html">
+                <div class="aankomst_vertrek">
+                    <div class="aankomst">
+                        <label class="aankomst_label" for="aankomst">aankomst:</label>
+                        <input class="aankomst_input" type="date" id="aankomst" name="aankomst_hotel"> 
+                    </div>
+                    <div class="vertrek">
+                        <label class="vertrek_label" for="vertrek">vertrek:</label>
+                        <input class="vertrek_input" type="date" id="vertrek" name="vertrek_hotel"> 
+                    </div>
+                </div>
+                <div class="kamers_reservatie">
+                    <label class="kamers_label" for="kamers">Kamers:</label>
+                    <select class="kamers_select" name="kamers" id="kamers">
+                        <option>2 persoonskamer</option>
+                        <option>2 persoonskamer met teras</option>
+                        <option>Luxe 2 persoonskamer</option>
+                        <option>3 persoonskamer</option>
+                        <option>Luxe suite</option>
+                        <option>Familie kamer</option>
+                    </select>
+                </div>
+                <div class="aantal_personen">
+                    <div class="volwassenen">
+                        <label class="aantal_label" for="aantal-volwassenen">Volwassenen:</label>
+                        <input class="aantal_input" type="number" name="aantal-volwassenen" id="aantal-volwassenen">
+                    </div>
+                    <div class="kinderen">
+                        <label class="aantal_label" for="aantal-kinderen">Kinderen:</label>
+                        <input class="aantal_input-kinderen" type="number" name="aantal-kinderen" id="aantal-kinderen">
+                    </div>
+                </div>
+                <div class="eten_reservatie">
+                    <div class="eettijden">
+                        <input class="eten_input" type="checkbox" name="eettijden_ontbijt" id="eettijden_ontbijt">
+                        <label class="eten_label" for="eettijden_ontbijd">ontbijt</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="checkbox" name="eettijden_middag" id="eettijden_middag">
+                        <label class="eten_label" for="eettijden-middag">middag</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="checkbox" name="eettijden_avond" id="eettijden_avond">
+                        <label class="eten_label" for="eettijden_avond">avond</label>
+                    </div>
+                </div>
+                <div class="volgende_pagina">
+                    <button class="hotel_reservatie-btn" type="submit">Volgende pagina</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="left3">
+            <h3>Adres</h3>
+            <table>
+                <tr>
+                <p> Ezelstraat 42</p>
+                </tr>
+                <tr>
+                    <p>8000 Brugge</p>
+                </tr>
+                <tr>
+                    <p>België</p>
+                </tr>
+                <tr>
+                    hoteldesnuffel@gmail.com
+                </tr>
+            </table>
+        </div>
+        <div class="center3">
+            <h3>De snuffel</h3>
+            <table>
+                <tr>
+                    <a class="telefoon_nummer" href="tel:+3250333133">+32 50 33 31 33</a>
+                </tr>
+                <tr>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </tr>
+                <tr>
+                    <h3>Nieuwsbrief</h3>
+                </tr>
+                <tr>
+                    <p>Inschrijven voor onze nieuwsbrief kan hier</p>
+                </tr>
+                <tr>
+                    <form action="">
+                        <p>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                            <input type="submit" value="Verzenden">
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="right3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9997.277959347482!2d3.2186101!3d51.2131899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350d6b6d90fe3%3A0xb9f0bab9425cf691!2sSnuffel%20Hostel!5e0!3m2!1snl!2sbe!4v1701955797590!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+</html>
