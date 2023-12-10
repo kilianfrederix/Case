@@ -50,41 +50,73 @@
             </div>
         </div>
     </header>
-    <h1>Reservatie restaurant</h1>
-    <form>
-        <p>
-          Naam: <input type="text">
-        </p>
-        <p>
-          Voornaam: <input type="text">
-        </p>
-        <p>
-          E-mail: <input type="mail">
-        </p>
-        <p>
-            Aantal personen:
-            <select>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-            </select>
-        </p>
+    <div class="form_hotel-reservatie">
+        <div class="container_form-hotel-reservatie-page2">
+            <form class="hotel_form-page2" action="">
+                
+                <h1>Reservatie restaurant</h1>
+                <div class="gegevens_box">
+                    <label class="naam_label" for="voornaam">Voornaam:</label>
+                    <input class="naam_input" type="text" id="voornaam" name="voornaam">
+                </div>
+                <div class="gegevens_box">
+                    <label class="naam_label" for="achternaam">Achternaam:</label>
+                    <input class="naam_input" type="text" id="achternaam" name="achternaam">
+                </div>
+                <div class="gegevens_box">
+                    <label class="nummer_label" for="nummer">Telefoon Nummer:</label>
+                    <input class="nummer_input" type="number" name="nummer" id="nummer" placeholder="0000-00-00-00">
+                </div>
+                <div class="gegevens_box">
+                    <label class="email_label" for="email">E-mail Address:</label>
+                    <input class="email_input" type="email" name="email" id="email">
+                </div>
+                
+                
+                            <div class="aankomst_vertrek">
+                                <div class="aankomst">
+                                    <label class="aankomst_label" for="aankomst">datum om te komen eten:</label>
+                                    <input class="aankomst_input" type="date" id="aankomst" name="aankomst_hotel"> 
+                                </div>
+                            </div>
+                         
+                            <div class="aantal_personen">
+                                <div class="volwassenen">
+                                    <label class="aantal_label" for="aantal-volwassenen">aantal personen:</label>
+                                    <input class="aantal_input" type="number" name="aantal-volwassenen" id="aantal-volwassenen">
+                                </div>
+                            </div>
+                            <div class="eten_reservatie">
+                                <div class="eettijden">
+                                    <input class="eten_input" type="checkbox" name="eettijden_ontbijt" id="eettijden_ontbijt">
+                                    <label class="eten_label" for="eettijden_ontbijd">ontbijt</label>
+                                </div>
+                                <div class="eettijden">
+                                    <input class="eten_input" type="checkbox" name="eettijden_middag" id="eettijden_middag">
+                                    <label class="eten_label" for="eettijden-middag">middag</label>
+                                </div>
+                                <div class="eettijden">
+                                    <input class="eten_input" type="checkbox" name="eettijden_avond" id="eettijden_avond">
+                                    <label class="eten_label" for="eettijden_avond">avond</label>
+                                </div>
+                            </div>
+                          
+                        
+                    
+                
+                
+                
+                
+                <div class="volgende_pagina">
+                    <button class="hotel_reservatie-btn" type="submit">Submit</button>
+                </div>
 
-        <p>
-          Bericht: <br>
-          <textarea cols="30" rows="10"></textarea>
-        </p>
-        <p>
-          <input type="checkbox"> Ik ga akkoord met de voorwaarden
-        </p>
-        
-        <p>
-          <input type="submit" value="Verzenden">
-        </p>
-      </form>
+
+
+
+            </form>
+        </div>
+    </div>
       <div class="footer">
         <div class="left3">
             <h3>adres</h3>
