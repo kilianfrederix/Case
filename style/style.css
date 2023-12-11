@@ -632,7 +632,7 @@ nav ul li {
 
 .aankomst_label {
     display: flex;
-    width: 100%;
+    width: 22%;
     margin-left: 10px;
     font-size: 1rem;
     
@@ -654,7 +654,7 @@ nav ul li {
 
 .vertrek_label {
     display: flex;
-    width: 100%;
+    width: 28%;
     margin-left: 10px;
     font-size: 1rem;
 }
@@ -707,11 +707,19 @@ nav ul li {
     width: 50%;
 }
 
-.aantal_label {
+.aantal_label-volwassenen {
     display: flex;
     padding: 5px;
-    width: 100%;
-    margin-left: 10px;
+    width: 25%;
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+.aantal_label-kinderen {
+    display: flex;
+    padding: 5px;
+    width: 17%;
+    margin-left: 5px;
     font-size: 1rem;
 }
 
@@ -741,17 +749,19 @@ nav ul li {
 .eettijden {
     display: flex;
     justify-content: center;
-    width: 300%;
+    width: 100%;
 }
 
 .eten_input {
     width: 15px;
     height: 15px;
+    margin-right: 10px;
 }
 
 .eten_label {
     font-size: 1.2rem;
-    width: 55px;
+    
+    width: 20px;
 }
 
 .volgende_pagina {
@@ -790,7 +800,7 @@ nav ul li {
 }
 
 .naam_label {
-    width: 50%;
+    width: 10%;
     padding: 5px;
     margin-left: 5px;
     font-size: 1rem;
@@ -805,7 +815,7 @@ nav ul li {
 }
 
 .nummer_label {
-    width: 50%;
+    width: 18%;
     padding: 5px;
     margin-left: 5px;
     font-size: 1rem;
@@ -820,7 +830,7 @@ nav ul li {
 }
 
 .email_label {
-    width: 50%;
+    width: 15%;
     padding: 5px;
     margin-left: 5px;
     font-size: 1rem;
@@ -928,7 +938,7 @@ nav ul li {
 }
 
 .postcode_label {
-    width: 50%;
+    width: 18%;
     padding: 5px;
     margin-left: 5px;
     font-size: 1rem;
@@ -943,7 +953,7 @@ nav ul li {
 }
 
 .gemeente_label {
-    width: 50%;
+    width: 20%;
     padding: 5px;
     margin-left: 5px;
     font-size: 1rem;
@@ -959,6 +969,26 @@ nav ul li {
 
 .error {
     color: red;
+}
+
+.naam_error {
+    color: red;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.achternaam_error {
+    color: red;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.eettijden_error {
+    display: flex;
+    margin-left: 5px;
+    justify-content: center;
+    color: red;
+    width: 100%;
 }
 
 label {
