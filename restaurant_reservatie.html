@@ -17,9 +17,77 @@
 
     <title>Restaurant reservatie</title>
 
+
+    <script>
+        "use strict";
+
+        function formulier() {
+            const voornaam = document.getElementById("voornaam").value;
+            const achternaam = document.getElementById("achternaam").value;
+            const nummer = document.getElementById("nummer").value;
+            const email = document.getElementById("email").value;
+            const aankomst = document.getElementById("aankomst").value;
+            const aantalVolwassenen = document.getElementById("aantal-volwassenen").value;
+
+            
+            const ontbijtCheckbox = document.getElementById("eettijden_ontbijt");
+            const middagCheckbox = document.getElementById("eettijden_middag");
+            const avondCheckbox = document.getElementById("eettijden_avond");
+
+            
+
+            
+            if (!voornaam || !achternaam || !nummer || !email || !aankomst || !aantalVolwassenen) {
+                alert("Vul alle velden in !");
+                return false;
+            }
+
+            
+            const nameRegex = /^[a-zA-Z]{2,}$/;
+            if (!nameRegex.test(voornaam) || !nameRegex.test(achternaam)) {
+                alert("Voor en achternaam moeten minstens 2 letters hebbben !");
+                return false;
+            }
+
+            
+            const nummerRegex = /^(0|+)[0-9]{9,12}$/;
+            if (!nummerRegex.test(nummer)) {
+                alert("telefoonnummer moet beginnen met een 0 of + en minstens 9 cijfers hebben");
+                return false;
+            }
+
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Geef een geldig e-mail adres !");
+                return false;
+            }
+
+            
+            const aankomstDate = new Date(aankomst);
+            const currentDate = new Date();
+
+            if (isNaN(aankomstDate.getTime()) || aankomstDate < currentDate) {
+                alert("datum is niet correct !");
+                return false;
+            }
+
+            if (!ontbijtCheckbox.checked && !middagCheckbox.checked && !avondCheckbox.checked) {
+                alert("selecteer een maaltijdmoment !");
+                return false;
+            }
+
+            return true; 
+        }
+    </script>
+
 </head>
 
 <body>
+
+    
+
+
     <header class="main_header">
         <div class="container_header-contact">
             <a class="telefoon_nummer-header" href="tel:+3250333133">+32 50 33 31 33 </a>
@@ -59,7 +127,12 @@
     </header>
     <div class="form_hotel-reservatie">
         <div class="container_form-hotel-reservatie-page2">
-            <form class="hotel_form-page2" id="form_validatie" action="">
+
+            
+
+            <form class="hotel_form-page2" action=""  onsubmit="return formulier();">
+
+
                 <h1>Reservatie restaurant</h1>
                 <div class="gegevens_box">
                     <label class="naam_label" for="voornaam">Voornaam:</label>
@@ -71,7 +144,7 @@
                 </div>
                 <div class="gegevens_box">
                     <label class="nummer_label" for="nummer">Telefoon Nummer:</label>
-                    <input class="nummer_input" type="number" name="nummer" id="nummer" placeholder="0000-00-00-00">
+                    <input class="nummer_input" type="number" name="nummer" id="nummer" placeholder="">
                 </div>
                 <div class="gegevens_box">
                     <label class="email_label" for="email">E-mail Address:</label>
