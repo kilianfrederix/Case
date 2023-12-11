@@ -43,8 +43,8 @@
             }
 
             
-            const nameRegex = /^[a-zA-Z]{2,}$/;
-            if (!nameRegex.test(voornaam) || !nameRegex.test(achternaam)) {
+            const naamRegex = /^[a-zA-Z]{2,}$/;
+            if (!naamRegex.test(voornaam) || !naamRegex.test(achternaam)) {
                 alert("voor en achternaam moeten minstens 2 letters bevatten en geen cijfers");
                 return false;
             }
