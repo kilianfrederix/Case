@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hotel reservatie</title>
 </head>
+
 <body class="background_hotel-reservatie">
     <header class="main_header">
         <div class="container_header-contact">
@@ -47,29 +49,31 @@
             </div>
         </div>
     </header>
-    <h1 class="form_title">Snuffel hotel</h1>
     <div class="form_hotel-reservatie">
-        <div class="container_form-hotel-reservatie">
-            <form class="hotel_form" action="hotel_reservatie-page2.html">
+        <div class="container_form-hotel-reservatie-page2">
+            <form class="hotel_form-page2" id="form_validatie">
+                <h1>Reserveer een kamer</h1>
                 <div class="aankomst_vertrek">
                     <div class="aankomst">
                         <label class="aankomst_label" for="aankomst">aankomst:</label>
-                        <input class="aankomst_input" type="date" id="aankomst" name="aankomst_hotel"> 
+                        <input class="aankomst_input" type="date" id="aankomst" name="aankomst_hotel">
                     </div>
                     <div class="vertrek">
                         <label class="vertrek_label" for="vertrek">vertrek:</label>
-                        <input class="vertrek_input" type="date" id="vertrek" name="vertrek_hotel"> 
+                        <input class="vertrek_input" type="date" id="vertrek" name="vertrek_hotel">
                     </div>
                 </div>
                 <div class="kamers_reservatie">
                     <label class="kamers_label" for="kamers">Kamers:</label>
+                    <span class="error" id="kamers_error"></span>
                     <select class="kamers_select" name="kamers" id="kamers">
-                        <option>2 persoonskamer</option>
-                        <option>2 persoonskamer met teras</option>
-                        <option>Luxe 2 persoonskamer</option>
-                        <option>3 persoonskamer</option>
-                        <option>Luxe suite</option>
-                        <option>Familie kamer</option>
+                        <option value="">selecteer</option>
+                        <option value="2-persoonskamer">2 persoonskamer</option>
+                        <option value="2-persoonskamer-met-teras">2 persoonskamer met teras</option>
+                        <option value="Luxe-2-persoonskamer">Luxe 2 persoonskamer</option>
+                        <option value="3-persoonskamer">3 persoonskamer</option>
+                        <option value="Luxe-suite">Luxe suite</option>
+                        <option value="Familie-kamer">Familie kamer</option>
                     </select>
                 </div>
                 <div class="aantal_personen">
@@ -96,8 +100,51 @@
                         <label class="eten_label" for="eettijden_avond">avond</label>
                     </div>
                 </div>
+                <h1>perssonlijke gegevens</h1>
+                <div class="gegevens_box">
+                    <label class="naam_label" for="voornaam">Voornaam:</label>
+                    <span class="error" id="voornaam_error"></span>
+                    <input class="naam_input" type="text" id="voornaam" name="voornaam">
+                </div>
+                <div class="gegevens_box">
+                    <label class="naam_label" for="achternaam">Achternaam:</label>
+                    <input class="naam_input" type="text" id="achternaam" name="achternaam">
+                </div>
+                <div class="gegevens_box">
+                    <label class="nummer_label" for="nummer">Telefoon Nummer:</label>
+                    <input class="nummer_input" type="number" name="nummer" id="nummer" placeholder="0000-00-00-00">
+                </div>
+                <div class="gegevens_box">
+                    <label class="email_label" for="email">E-mail Address:</label>
+                    <input class="email_input" type="email" name="email" id="email">
+                </div>
+                <h1>Uw Address</h1>
+                <div class="adress_gegevens_3wide">
+                    <div class="straatnaam_box">
+                        <label class="straatnaam_label" for="straatnaam">Straatnaam:</label>
+                        <input class="straatnaam_input" type="text" id="straatnaam" name="straatnaam">
+                    </div>
+                    <div class="straatnummer_box">
+                        <label class="straatnummer_label" for="straatnummer">Nummer:</label>
+                        <input class="straatnummer_input" type="number" name="straatnummer" id="straatnummer">
+                    </div>
+                    <div class="bus_box">
+                        <label class="bus_label" for="bus">Bus:</label>
+                        <input class="bus_input" type="number" name="bus" id="bus">
+                    </div>
+                </div>
+                <div class="postcode-gemeente_box">
+                    <div class="postcode_box">
+                        <label class="postcode_label" for="postcode">Postcode</label>
+                        <input class="postcode_input" type="number" name="postcode" id="postcode">
+                    </div>
+                    <div class="gemeente_box">
+                        <label class="gemeente_label" for="gemeente">Gemeente</label>
+                        <input class="gemeente_input" type="text" id="gemeente" name="gemeente">
+                    </div>
+                </div>
                 <div class="volgende_pagina">
-                    <button class="hotel_reservatie-btn" type="submit">Volgende pagina</button>
+                    <button class="hotel_reservatie-btn" type="button" onclick="verstuur()">Submit</button>
                 </div>
             </form>
         </div>
@@ -107,7 +154,7 @@
             <h3>Adres</h3>
             <table>
                 <tr>
-                <p> Ezelstraat 42</p>
+                    <p> Ezelstraat 42</p>
                 </tr>
                 <tr>
                     <p>8000 Brugge</p>
@@ -142,14 +189,19 @@
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email">
                         </p>
-                            <input type="submit" value="Verzenden">
+                        <input type="submit" value="Verzenden">
                     </form>
                 </tr>
             </table>
         </div>
         <div class="right3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9997.277959347482!2d3.2186101!3d51.2131899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350d6b6d90fe3%3A0xb9f0bab9425cf691!2sSnuffel%20Hostel!5e0!3m2!1snl!2sbe!4v1701955797590!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9997.277959347482!2d3.2186101!3d51.2131899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350d6b6d90fe3%3A0xb9f0bab9425cf691!2sSnuffel%20Hostel!5e0!3m2!1snl!2sbe!4v1701955797590!5m2!1snl!2sbe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+    <script src="javascript/script.js"></script>
 </body>
+
 </html>

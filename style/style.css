@@ -676,7 +676,7 @@ nav ul li {
 
 .kamers_label {
     display: flex;
-    width: 100%;
+    width: 10%;
     margin-left: 10px;
 }
 
@@ -758,6 +758,8 @@ nav ul li {
     width: 50%;
     padding: 5px;
     border-radius: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .container_form-hotel-reservatie-page2 {
@@ -951,4 +953,12 @@ nav ul li {
     border-radius: 10px;
 }
 
+.error {
+    color: red;
+}
 
+label {
+    display: inline-block;
+    text-align: right;
+    width: 200px;
+}
