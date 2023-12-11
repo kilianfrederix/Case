@@ -38,28 +38,28 @@
 
             
             if (!voornaam || !achternaam || !nummer || !email || !aankomst || !aantalVolwassenen) {
-                alert("Vul alle velden in !");
+                alert("Vul de lege velden in !");
                 return false;
             }
 
             
             const nameRegex = /^[a-zA-Z]{2,}$/;
             if (!nameRegex.test(voornaam) || !nameRegex.test(achternaam)) {
-                alert("Voor en achternaam moeten minstens 2 letters hebbben !");
+                alert("voor en achternaam moeten minstens 2 letters bevatten en geen cijfers");
                 return false;
             }
 
             
-            const nummerRegex = /^(0|+)[0-9]{9,12}$/;
+            const nummerRegex = /^(0 || + )[0-9]{9,12}$/;
             if (!nummerRegex.test(nummer)) {
-                alert("telefoonnummer moet beginnen met een 0 of + en minstens 9 cijfers hebben");
+                alert("Foutief telefoon nummer !");
                 return false;
             }
 
             
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert("Geef een geldig e-mail adres !");
+                alert("Geef het juiste e-mail adres in !");
                 return false;
             }
 
@@ -68,12 +68,12 @@
             const currentDate = new Date();
 
             if (isNaN(aankomstDate.getTime()) || aankomstDate < currentDate) {
-                alert("datum is niet correct !");
+                alert("Deze datum is niet correct !");
                 return false;
             }
 
             if (!ontbijtCheckbox.checked && !middagCheckbox.checked && !avondCheckbox.checked) {
-                alert("selecteer een maaltijdmoment !");
+                alert("Maak een keuze wanneer u komt eten !");
                 return false;
             }
 
@@ -164,18 +164,59 @@
                 </div>
                 <div class="eten_reservatie">
                     <div class="eettijden">
-                        <input class="eten_input" type="checkbox" name="eettijden_ontbijt" id="eettijden_ontbijt">
-                        <label class="eten_label" for="eettijden_ontbijd">ontbijt</label>
+                        <input class="eten_input" type="radio" name="eettijden_ontbijt" id="eettijden_ontbijt">
+                        <label class="eten_label" for="eettijden_ontbijd">Geen ontbijt</label>
                     </div>
                     <div class="eettijden">
-                        <input class="eten_input" type="checkbox" name="eettijden_middag" id="eettijden_middag">
-                        <label class="eten_label" for="eettijden-middag">middag</label>
+                        <input class="eten_input" type="radio" name="eettijden_ontbijt" id="eettijden_ontbijt">
+                        <label class="eten_label" for="eettijden_ontbijd">ontbijt 7.00u tot 8.00u</label>
                     </div>
                     <div class="eettijden">
-                        <input class="eten_input" type="checkbox" name="eettijden_avond" id="eettijden_avond">
-                        <label class="eten_label" for="eettijden_avond">avond</label>
+                        <input class="eten_input" type="radio" name="eettijden_ontbijt" id="eettijden_ontbijt">
+                        <label class="eten_label" for="eettijden_ontbijd">ontbijt 8.00u tot 9.00u</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_ontbijt" id="eettijden_ontbijt">
+                        <label class="eten_label" for="eettijden_ontbijd">ontbijt 9.00u tot 10.00u</label>
                     </div>
                 </div>
+                <div class="eten_reservatie">
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_middag" id="eettijden_middag">
+                        <label class="eten_label" for="eettijden-middag">geen middag eten</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_middag" id="eettijden_middag">
+                        <label class="eten_label" for="eettijden-middag">middag 12.00u tot 13.00u</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_middag" id="eettijden_middag">
+                        <label class="eten_label" for="eettijden-middag">middag 13.00u tot 14.00u</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_middag" id="eettijden_middag">
+                        <label class="eten_label" for="eettijden-middag">middag 14.00u tot 15.00u</label>
+                    </div>
+                </div>
+                <div class="eten_reservatie">
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_avond" id="eettijden_avond">
+                        <label class="eten_label" for="eettijden_avond">Geen avond eten</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_avond" id="eettijden_avond">
+                        <label class="eten_label" for="eettijden_avond">avond 18.00u tot 19.00u</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_avond" id="eettijden_avond">
+                        <label class="eten_label" for="eettijden_avond">avond 19.00u tot 20.00u</label>
+                    </div>
+                    <div class="eettijden">
+                        <input class="eten_input" type="radio" name="eettijden_avond" id="eettijden_avond">
+                        <label class="eten_label" for="eettijden_avond">avond 20.00u tot 21.00u</label>
+                    </div>
+                </div>
+                
 
 
 
