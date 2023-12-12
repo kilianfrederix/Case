@@ -761,7 +761,7 @@ nav ul li {
     border-radius: 10px;
 }
 
-.container_form-hotel-reservatie-page2 {
+.container_restaurant_form {
     width: 800px;
     display: flex;
     justify-content: center;
@@ -771,7 +771,7 @@ nav ul li {
     color: white;
 }
 
-.hotel_form-page2 {
+.restaurant_form{
     margin: 0;
     padding: 20px;
     color: white;
