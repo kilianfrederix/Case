@@ -242,6 +242,7 @@ td{
 }
 
 .left{
+    margin-right: 2em;
 	margin-left: 2em;
 	width: 50%;
     background: #d9bca3;
