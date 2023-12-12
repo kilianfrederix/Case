@@ -213,7 +213,20 @@ td{
 	width: 70%;
     height: 400px;
 	margin: auto;
-    margin-bottom: 50px;
+	display: flex;
+	gap: 20px;
+	padding: 0px 0;
+	border: 5px solid #8c6d51;
+	padding-bottom: 2em;
+    padding-top: 2em;
+    background: #bf895a;
+}
+
+.kamers_bottom {
+    width: 70%;
+    height: 400px;
+	margin: auto;
+    margin-bottom: 60px;
 	display: flex;
 	gap: 20px;
 	padding: 0px 0;
