@@ -365,6 +365,15 @@ td{
     transition: 0.7s;
 }
 
+.icon_footer {
+    color: black;
+    transition: 0.7s;
+}
+
+.icon_footer:hover {
+    color: #592D14;
+}
+
 .icon:hover {
     color: #592D14;
 }
