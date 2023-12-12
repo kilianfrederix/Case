@@ -636,7 +636,13 @@ nav ul li {
     width: 22%;
     margin-left: 10px;
     font-size: 1rem;
-    
+}
+
+.aankomst_label2 {
+    display: flex;
+    width: 50%;
+    margin-left: 10px;
+    font-size: 1rem;
 }
 
 .aankomst_input {
