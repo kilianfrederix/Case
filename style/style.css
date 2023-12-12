@@ -761,17 +761,29 @@ nav ul li {
     border-radius: 10px;
 }
 
-.container_form-hotel-reservatie-page2 {
+.container_form_restaurant {
     width: 800px;
     display: flex;
     justify-content: center;
+}
+
+.container_form-hotel-reservatie-page2{
+    width: 800px;
+    display: flex;
+    justify-content: center;  
 }
 
 .reservatie_title {
     color: white;
 }
 
-.hotel_form-page2 {
+.hotel_form-page2{
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+.restaurant_form {
     margin: 0;
     padding: 20px;
     color: white;
