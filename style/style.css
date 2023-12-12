@@ -761,7 +761,7 @@ nav ul li {
     border-radius: 10px;
 }
 
-.container_restaurant_form {
+.container_form_restaurant {
     width: 800px;
     display: flex;
     justify-content: center;
@@ -771,7 +771,7 @@ nav ul li {
     color: white;
 }
 
-.restaurant_form{
+.restaurant_form {
     margin: 0;
     padding: 20px;
     color: white;
