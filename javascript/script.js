@@ -42,7 +42,7 @@ function controleerachternaam() {
         allescorrect = false;
     } else if (achternaam.search(/^[a-zA-Z]+$/)== -1) {
         document.getElementById("achternaam_error").innerHTML = "Je mag geen getallen ingeven!";
-        allescorrect + false;
+        allescorrect = false;
     } else {
         document.getElementById("achternaam_error").innerHTML = "";
     }
@@ -54,7 +54,7 @@ function controleerstraat() {
         allescorrect = false;
     } else if (straat.search(/^[a-zA-Z]+$/)== -1) {
         document.getElementById("straat_error").innerHTML = "Je mag geen getallen ingeven!";
-        allescorrect + false;
+        allescorrect = false;
     } else {
         document.getElementById("straat_error").innerHTML = "";
     }
@@ -62,21 +62,26 @@ function controleerstraat() {
 
 function controleerStraatnummer(){
     if(straatnummer.search(/^\d/) == -1){
-    document.getElementById("straatnummer_error").innerHTML = "Minstens 1 cijfer!";
+        document.getElementById("straatnummer_error").innerHTML = "Minstens 1 cijfer!";
         allescorrect = false;
-    }
-    else{
-    document.getElementById("straatnummer_error").innerHTML = "";
+    } else {
+        document.getElementById("straatnummer_error").innerHTML = "";
     }
 }
 
 function controleerbusnummer(){
     if(bus.search(/^\d/) == -1){
-    document.getElementById("bus_error").innerHTML = "Minstens 1 cijfer!";
+        document.getElementById("bus_error").innerHTML = "Minstens 1 cijfer!";
         allescorrect = false;
+    } else if (bus > 100) {
+        document.getElementById("bus_error").innerHTML = "je mag niet hoger als 100 ingeven!"
+        allescorrect = false;
+    } else if (bus == 0) {
+        document.getElementById("bus_error").innerHTML = "je moet hoger als 0 ingeven"
     } else {
         document.getElementById("bus_error").innerHTML = "";
     }
+    
 }
 
 function controleerPostcode(){
@@ -91,8 +96,8 @@ function controleerPostcode(){
 function controleerEmail(){
     let regexEmail=/^[A-Za-z][\.A-Za-z0-9+_-]+@[\.A-Za-z0-9-]+\.[A-Za-z]{2,20}$/;
     if(regexEmail.test(email) == false){
-    document.getElementById("email_error").innerHTML = "Dit is geen correcte E-mail Address!";
-    allescorrect = false;
+        document.getElementById("email_error").innerHTML = "Dit is geen correcte E-mail Address!";
+        allescorrect = false;
     } else {
         document.getElementById("email_error").innerHTML = "";
     }
@@ -114,6 +119,7 @@ function controleervertrek() {
         allescorrect = false;
     } else if (vertrek == 0){
         document.getElementById("vertrek_error").innerHTML = "Je moet meer dan 0 ingeven!";
+        allescorrect = false;
     } else {
         document.getElementById("vertrek_error").innerHTML = "";
     }
@@ -135,17 +141,19 @@ function controleergemeente() {
         allescorrect = false;
     } else if (gemeente.search(/^[a-zA-Z]+$/)== -1) {
         document.getElementById("gemeente_error").innerHTML = "Je mag geen getallen ingeven!";
-        allescorrect + false;
+        allescorrect = false;
     } else {
         document.getElementById("gemeente_error").innerHTML = "";
     }
 }
+
 function controleervolwassenen() {
     if (volwassenen.length < 1 || volwassenen > 4 ) {
         document.getElementById("volwassenen_error").innerHTML = "maximum 4 personen ingeven!";
         allescorrect = false;
     } else if (volwassenen == 0){
         document.getElementById("volwassenen_error").innerHTML = "Je moet meer dan 0 ingeven!";
+        allescorrect = false;
     } else {
         document.getElementById("volwassenen_error").innerHTML = "";
     }
@@ -157,6 +165,7 @@ function controleerkinderen() {
         allescorrect = false;
     } else if (kinderen == 0){
         document.getElementById("kinderen_error").innerHTML = "Je moet meer dan 0 ingeven!";
+        allescorrect = false;
     } else {
         document.getElementById("kinderen_error").innerHTML = "";
     }
@@ -181,6 +190,7 @@ function verstuur() {
     kinderen = document.getElementById("aantal-kinderen").value;
 
     teltijden = 0;
+    allescorrect = true;
 
     // controle voornaam 
     if (voornaam.length == 0) {
@@ -215,11 +225,20 @@ function verstuur() {
     }
 
     // controle busnummer
-    if (bus.length == 0) {
-        document.getElementById("bus_error").innerHTML = "Vul je busnummer in!!"
+    if(bus == "") {
+        document.getElementById("bus_error").innerHTML = ""
+        allescorrect = true
+    } else if (bus.search(/^\d/) == -1){
+        document.getElementById("bus_error").innerHTML = "Minstens 1 cijfer!";
+        allescorrect = false;
+    } else if (bus > 100) {
+        document.getElementById("bus_error").innerHTML = "je mag niet hoger als 100 ingeven!";
+        allescorrect = false;
+    } else if (bus == 0) {
+        document.getElementById("bus_error").innerHTML = "je moet hoger als 0 ingeven";
         allescorrect = false;
     } else {
-        controleerbusnummer()
+        document.getElementById("bus_error").innerHTML = "";
     }
 
     // controle postcode
@@ -241,6 +260,7 @@ function verstuur() {
     // controle aankomstdatum
     if (aankomstdatum.length == 0) {
         document.getElementById("aankomst_error").innerHTML = "Vul je datum in!!"
+        allescorrect = false;
     } else {
         controleeraankomst()
     }
@@ -248,6 +268,7 @@ function verstuur() {
     // controle vertrek
     if (vertrek.length == 0) {
         document.getElementById("vertrek_error").innerHTML = "Vul je aantal in!!"
+        allescorrect = false;
     } else {
         controleervertrek()
     }
@@ -308,5 +329,12 @@ function verstuur() {
     } else {
         document.getElementById("kamers_error").innerHTML = "";
     }
+
+    // formulier versturen
+    
+    if (allescorrect) {
+        alert("Je formulier is goed verstuurd")
+    }
 }
+
 verstuur()

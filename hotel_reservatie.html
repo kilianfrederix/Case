@@ -51,7 +51,7 @@
     </header>
     <div class="form_hotel-reservatie">
         <div class="container_form-hotel-reservatie-page2">
-            <form class="hotel_form-page2" id="form_validatie">
+            <form class="hotel_form-page2" id="form_validatie" onsubmit="return verstuur()">
                 <h1>Reserveer een kamer</h1>
                 <div class="aankomst_vertrek">
                     <div class="aankomst">
@@ -78,6 +78,7 @@
                         <option value="Familie-kamer">Familie kamer 4 persoons</option>
                     </select>
                 </div>
+                <span class="aantal_error" id="aantal_error"></span>
                 <div class="aantal_personen">
                     <div class="volwassenen">
                         <label class="aantal_label-volwassenen" for="aantal-volwassenen">Volwassenen:</label>
@@ -92,6 +93,10 @@
                 </div>
                 <div class="eten_reservatie">
                     <span class="eettijden_error" id="eettijden_error"></span>
+                    <div class="eettijden">
+                        <input class="eten_input" type="checkbox" name="eettijden" id="eettijden">
+                        <label class="eten_label" for="eettijden">geen eten</label>
+                    </div>
                     <div class="eettijden">
                         <input class="eten_input" type="checkbox" name="eettijden" id="eettijden">
                         <label class="eten_label" for="eettijden">ontbijt</label>
@@ -157,7 +162,7 @@
                     </div>
                 </div>
                 <div class="volgende_pagina">
-                    <button class="hotel_reservatie-btn" type="button" onclick="verstuur()">Submit</button>
+                    <input class="hotel_reservatie-btn" type="button" value="verstuur" id="Knop_verstuur" onclick="verstuur()">
                 </div>
             </form>
         </div>
