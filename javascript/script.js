@@ -16,8 +16,7 @@ let middag;
 let avond;
 let nummer;
 let gemeente;
-let volwassenen;
-let kinderen;
+let aantal_personen;
 let aankomstdatum;
 let vertrek;
 
@@ -147,29 +146,18 @@ function controleergemeente() {
     }
 }
 
-function controleervolwassenen() {
-    if (volwassenen.length < 1 || volwassenen > 4 ) {
-        document.getElementById("volwassenen_error").innerHTML = "maximum 4 personen ingeven!";
+function controleeraantal() {
+    if (aantal_personen.length < 1 || aantal_personen > 4 ) {
+        document.getElementById("personen_error").innerHTML = "maximum 4 personen ingeven!";
         allescorrect = false;
-    } else if (volwassenen == 0){
-        document.getElementById("volwassenen_error").innerHTML = "Je moet meer dan 0 ingeven!";
+    } else if (aantal_personen == 0){
+        document.getElementById("personen_error").innerHTML = "Je moet meer dan 0 ingeven!";
         allescorrect = false;
     } else {
-        document.getElementById("volwassenen_error").innerHTML = "";
+        document.getElementById("personen_error").innerHTML = "";
     }
 }
 
-function controleerkinderen() {
-    if (kinderen.length < 1 || kinderen > 4 ) {
-        document.getElementById("kinderen_error").innerHTML = "maximum 4 personen ingeven!";
-        allescorrect = false;
-    } else if (kinderen == 0){
-        document.getElementById("kinderen_error").innerHTML = "Je moet meer dan 0 ingeven!";
-        allescorrect = false;
-    } else {
-        document.getElementById("kinderen_error").innerHTML = "";
-    }
-}
 
 function verstuur() {
     geselecteerdekamer = document.getElementById("kamers").selectedIndex;
@@ -186,8 +174,7 @@ function verstuur() {
     alletijden=document.getElementsByClassName('eten_input');
     nummer = document.getElementById("nummer").value;
     gemeente = document.getElementById("gemeente").value;
-    volwassenen = document.getElementById("aantal-volwassenen").value;
-    kinderen = document.getElementById("aantal-kinderen").value;
+    aantal_personen = document.getElementById("aantal-personen").value;
 
     teltijden = 0;
     allescorrect = true;
@@ -306,20 +293,12 @@ function verstuur() {
         controleergemeente()
     }
 
-    // controle volwassenen
-    if (volwassenen.length == 0) {
-        document.getElementById("volwassenen_error").innerHTML = "Vul je aantal in!!";
+    // controle aantal personen
+    if (aantal_personen.length == 0) {
+        document.getElementById("personen_error").innerHTML = "Vul je aantal in!!";
         allescorrect = false;
     } else {
-        controleervolwassenen()
-    }
-
-    // controle kinderen
-    if (kinderen.length == 0) {
-        document.getElementById("kinderen_error").innerHTML = "Vul je aantal in!!";
-        allescorrect = false;
-    } else {
-        controleerkinderen()
+        controleeraantal()
     }
 
     // controle geselcteerde kamers

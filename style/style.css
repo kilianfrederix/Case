@@ -711,7 +711,7 @@ nav ul li {
     margin-bottom: 20px;
 }
 
-.volwassenen {
+.personen {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
@@ -726,13 +726,13 @@ nav ul li {
 .aantal_label {
     display: flex;
     padding: 5px;
-    width: 100%;
+    width: 16%;
     margin-left: 10px;
     font-size: 1rem;
 }
 
 .aantal_input {
-    width: 90%;
+    width: 100%;
     padding: 5px;
     margin-top: 5px;
     border: 1px solid;
