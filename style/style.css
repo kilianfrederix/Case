@@ -767,7 +767,19 @@ nav ul li {
     justify-content: center;
 }
 
+.container_form-hotel-reservatie-page2{
+    width: 800px;
+    display: flex;
+    justify-content: center;  
+}
+
 .reservatie_title {
+    color: white;
+}
+
+.hotel_form-page2{
+    margin: 0;
+    padding: 20px;
     color: white;
 }
 
