@@ -997,7 +997,6 @@ nav ul li {
 
 .error {
     color: red;
-    
 }
 
 .naam_error {
@@ -1037,26 +1036,26 @@ nav ul li {
     padding: 16px 24px;
     text-align: center;
     text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    transition: all 500ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100px;
     will-change: transform;
-  }
-  
-  .button-28:disabled {
+    }
+
+    .button-28:disabled {
     pointer-events: none;
-  }
-  
-  .button-28:hover {
+    }
+
+    .button-28:hover {
     color: #fff;
     background-color: #1A1A1A;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
-  }
-  
-  .button-28:active {
+    }
+
+    .button-28:active {
     box-shadow: none;
     transform: translateY(0);
-  }
+    }

@@ -17,7 +17,8 @@ let avond;
 let nummer;
 let gemeente;
 let aantal_personen;
-let aankomstdatum;
+let aankomst;
+let currentdate;
 let vertrek;
 
 
@@ -104,8 +105,8 @@ function controleerEmail(){
 
 function controleeraankomst() {
     let dateRegex = /^\d{4}-\d{2}-\d{2}$/
-    if (dateRegex.test(aankomstdatum) == false) {
-        document.getElementById("aankomst_error").innerHTML = "dit is geen geldige datum";
+    if (dateRegex.test(aankomst) == false) {
+        document.getElementById("aankomst_error").innerHTML = "dit is geen geldige datum!";
         allescorrect = false;
     } else {
         document.getElementById("aankomst_error").innerHTML = "";
@@ -169,13 +170,14 @@ function verstuur() {
     bus = document.getElementById("bus").value;
     postcode=document.getElementById("postcode").value;
     email=document.getElementById("email").value;
-    aankomstdatum=document.getElementById("aankomst").value;
+    aankomst=document.getElementById("aankomst").value;
+    currentdate=new Date(); 
+    let aankomstdatum = new Date(aankomst)
     vertrek=document.getElementById("vertrek").value;
     alletijden=document.getElementsByClassName('eten_input');
     nummer = document.getElementById("nummer").value;
     gemeente = document.getElementById("gemeente").value;
     aantal_personen = document.getElementById("aantal-personen").value;
-
     teltijden = 0;
     allescorrect = true;
 
@@ -245,9 +247,11 @@ function verstuur() {
     }
 
     // controle aankomstdatum
-    if (aankomstdatum.length == 0) {
+    if (aankomst.length == 0) {
         document.getElementById("aankomst_error").innerHTML = "Vul je datum in!!"
         allescorrect = false;
+    } else if (aankomstdatum < currentdate) {
+        document.getElementById("aankomst_error").innerHTML = "je moet na de huidige datum kiezen"
     } else {
         controleeraankomst()
     }
