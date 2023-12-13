@@ -1042,9 +1042,11 @@ nav ul li {
     touch-action: manipulation;
     width: 100px;
     will-change: transform;
-    }
-
-    .button-28:disabled {
+    background: #BF895A;
+    
+  }
+  
+  .button-28:disabled {
     pointer-events: none;
     }
 
