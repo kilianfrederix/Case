@@ -343,6 +343,10 @@ td{
     transition: 0.7s;
 }
 
+.telefoon_nummer-header:hover {
+    color: #592D14;
+}
+
 .telefoon_nummer {
     display: flex;
     text-decoration: none;
@@ -350,10 +354,6 @@ td{
     text-align: center;
     color: black;
     transition: 0.7s;
-}
-
-.telefoon_nummer-header:hover {
-    color: #592D14;
 }
 
 .address {
@@ -404,24 +404,6 @@ td{
     width: 200px;
 }
 
-nav {
-    width: 1000px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav a {
-    text-decoration: none;
-    text-align: right;
-    color: white;
-    transition: 0.7s;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 20px
-}
-
 .reserveerlink {
     border: 1px solid;
     border-radius: 20px;
@@ -455,9 +437,7 @@ nav ul li {
 
 .sfeerbeelden_text {
     width: 25%;
-    
     margin-top:30px;
-    
 }
 
 .home_content-infohotel {
