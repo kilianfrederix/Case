@@ -1043,10 +1043,9 @@ nav ul li {
     width: 100px;
     will-change: transform;
     background: #BF895A;
-    
-  }
-  
-  .button-28:disabled {
+    }
+
+    .button-28:disabled {
     pointer-events: none;
     }
 
